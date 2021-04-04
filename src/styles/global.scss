@@ -1,10 +1,13 @@
-// fonts
-@import './shared/fonts.scss';
 // vars
 @import './shared/variables';
+
+// fonts
+@import './shared/fonts.scss';
 // header styles
+@import './shared/header';
 
 body {
   font-family: 'Montserrat', 'Helvetica';
   box-sizing: border-box;
+  margin: 0;
 }

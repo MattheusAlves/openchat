@@ -4,12 +4,15 @@
   display: grid;
   grid-template-columns: 1.5fr 2px 1fr;
   align-items: center;
+  height: 100%;
 }
 
 .auth {
   &-container {
     display: flex;
+    flex: 1;
     justify-content: center;
+    align-items: center;
   }
   &-input-wrapper {
     display: flex;
@@ -21,15 +24,17 @@
   &-wrapper {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 100%;
     max-width: 25rem;
+    height: 25rem;
     background-color: $primary-color;
-    padding: 2rem;
+    padding: 3rem 2rem;
     color: #fff;
     border-radius: 8px;
   }
   &-button {
-    margin-top: 2.5rem;
+    margin-top: 3rem;
     align-self: center;
     outline: none;
     padding: 1rem 4rem;
@@ -48,8 +53,8 @@
     }
   }
   &-profile-image-wrapper {
-    width: 6rem;
-    height: 6rem;
+    width: 5.5rem;
+    height: 5.5rem;
     border-radius: 50%;
     border: 1px solid white;
     position: relative;
@@ -60,7 +65,7 @@
     justify-content: center;
     background-color: $secondary-color;
     &:hover {
-      opacity: 0.8;
+      opacity: 0.7;
     }
     & > input[type='file'] {
       position: absolute;
@@ -75,15 +80,92 @@
     }
   }
   &-profile-image-preview {
-    width:6rem;
-    height: 6rem;
+    width: 5.5rem;
+    height: 5.5rem;
     border-radius: 50%;
     position: absolute;
-    border:transparent;
+    border: transparent;
     opacity: 0;
   }
   &-profile-image-save-icon {
     align-self: center;
     width: 50px;
+  }
+}
+.svg {
+  &-wrapper {
+    height: 29rem;
+  }
+  &-woman-chat {
+    height: 27rem;
+  }
+}
+.input label,
+input {
+  font-size: 1.4rem !important;
+}
+@media screen and (min-width: 1800px) {
+  .auth-form {
+    &-wrapper {
+      height: 35rem;
+      max-width: 30rem;
+      padding: 4rem;
+    }
+    &-profile-image-wrapper {
+      width: 6rem;
+      height: 6rem;
+    }
+    &-profile-image-preview {
+      width: 6rem;
+      height: 6rem;
+    }
+  }
+  .svg {
+    &-wrapper {
+      height: 35rem;
+    }
+    &-woman-chat {
+      height: 35rem;
+    }
+  }
+  .input label,
+  input {
+    font-size: 1.7rem !important;
+  }
+}
+
+/**
+* Mobile
+*/
+@media screen and(max-width:500px) {
+  .container {
+    grid-template-columns: 100%;
+    padding: 2rem;
+    position: relative;
+  }
+  .auth-container {
+    width: 100%;
+  }
+  .auth-form {
+    &-wrapper {
+      width: 100%;
+      max-width: 100%;
+    }
+    &-profile-image-wrapper {
+      width: 6rem;
+      height: 6rem;
+    }
+    &-profile-image-preview {
+      width: 6rem;
+      height: 6rem;
+    }
+  }
+  .svg {
+    &-wrapper {
+      display: none;
+    }
+    &-woman-chat {
+      display: none;
+    }
   }
 }

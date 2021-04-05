@@ -1,8 +1,8 @@
-import styles from '@/styles/index.module.scss'
-
+import { useRef } from 'react'
 import TextField from '@material-ui/core/TextField'
 import { makeStyles } from '@material-ui/core/styles'
-import { useRef } from 'react'
+
+import styles from '@/styles/index.module.scss'
 
 const useStyles = makeStyles(_ => ({
   root: {
@@ -11,7 +11,9 @@ const useStyles = makeStyles(_ => ({
       // 'border-bottom': '2px solid #fff !important'
     },
     '& input': {
-      'border-bottom': '2px solid #fff !important'
+      'border-bottom': '2px solid #fff !important',
+      'font-size': '1.2rem'
+      // 'font-size': '2rem;'
     },
     '& .MuiInput-underline:hover:not(.Mui-disabled)::before': {
       'border-bottom': '2px solid #fff !important'
@@ -66,11 +68,14 @@ const Auth = (): JSX.Element => {
               helperText="Insira seu nome"
               required
               color="primary"
-              className={classes.root}
+              className={`${classes.root} ${styles.input}`}
             />
           </div>
           <div className={styles['auth-input-wrapper']}>
-            <TextField label="Interesses" className={classes.root} />
+            <TextField
+              label="Interesses"
+              className={`${classes.root} ${styles.input}`}
+            />
           </div>
           <button className={styles['auth-form-button']}>ENTRAR</button>
         </form>
@@ -80,6 +85,7 @@ const Auth = (): JSX.Element => {
         <img
           src={`${process.env.PUBLIC_URL}/assets/index_chat.svg`}
           alt="svg"
+          className={styles['svg-woman-chat']}
         />
       </div>
     </div>

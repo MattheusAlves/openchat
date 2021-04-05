@@ -6,7 +6,9 @@ function App(): JSX.Element {
   return (
     <div className="App">
       <Header />
-      <Routes />
+      <div className="base-layout">
+        <Routes />
+      </div>
     </div>
   )
 }

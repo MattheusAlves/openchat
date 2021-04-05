@@ -10,4 +10,12 @@ body {
   font-family: 'Montserrat', 'Helvetica';
   box-sizing: border-box;
   margin: 0;
+  
+}
+.App {
+  height: 100%;
+}
+.base-layout {
+  z-index: 0;
+  height: 100vh;
 }

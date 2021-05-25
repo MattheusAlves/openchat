@@ -1,0 +1,23 @@
+// vars
+@import './shared/variables';
+
+// fonts
+@import './shared/fonts.scss';
+// header styles
+@import './components/header';
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Montserrat', 'Helvetica';
+  margin: 0;
+}
+.App {
+  height: 100vh;
+}
+.base-layout {
+  z-index: 0;
+  height: 100%;
+  padding-top: 60px;
+}

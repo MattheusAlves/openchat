@@ -1,0 +1,24 @@
+
+
+.interests-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+.interest {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  & > svg:hover {
+    cursor: pointer;
+    color: yellow;
+  }
+  & > svg {
+    margin: 4px;
+    transition: color 0.2s;
+  }
+}
